@@ -1593,13 +1593,12 @@ static int send_invite(struct call *call)
 	     "- - - - - - - - - - - - - - - - - - -\n",
 	     desc->buf, desc->end);
 #endif
-	//char* cid = call->local_uri;
 	char cid[120];
 	strncpy(cid, call->local_uri, 120);
 	FILE* fp;
 	char c[120];
 	if ((fp = fopen("/tmp/.cid_baresip", "r")) == NULL)
-	  { /* Open source file. */
+	  { 
 	    printf("cid file at /tmp/.cid_baresip not found.");
 	  }
 	else
