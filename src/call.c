@@ -969,14 +969,13 @@ const char *call_id(const struct call *call)
 
 const char *call_peeruri(const struct call *call)
 {
-  //return //call ? call->peer_uri : NULL;
-  return "19004215050";
+  return call ? call->peer_uri : NULL;
 }
 
 
 const char *call_localuri(const struct call *call)
 {
-  return "19004206969";//call ? call->local_uri : NULL;
+  return call ? call->local_uri : NULL;
 }
 
 
